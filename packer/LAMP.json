@@ -20,7 +20,7 @@
                   "sudo apt-get install mysql-server -y",
                   "sudo apt-get install libapache2-mod-auth-mysql -y",
                   "sudo apt-get install php5-mysql -y",
-                  "sudo apt-get install sudo mysql_install_db -y"]
+                  "sudo mysql_install_db"]
     }
     ]
 }
