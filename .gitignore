@@ -1,4 +1,4 @@
 *.key
 *.pub
-*.state
+*.tfstate
 /secret
