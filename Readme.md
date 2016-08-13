@@ -6,7 +6,7 @@
 
 3.  Get the admin password via the AWS console
 
-    -   **Mstsc &lt;outputIP&gt;.**
+    ```Mstsc &lt;outputIP&gt;.```
 
 4.  RDP to the demo pc.
 
