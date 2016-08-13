@@ -64,6 +64,6 @@ Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
 
 In the shell at the root of the repo:
 
-    ```Packer build ./packer/LAMP.json```
+   ```Packer build ./packer/LAMP.json```
 
 Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
