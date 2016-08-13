@@ -56,7 +56,7 @@
 
 -   Demonstrate packer installed
 
-    ```packer```
+   ```packer version```
 
 **Lesson 2 Building a LAMP stack AMI**
 
