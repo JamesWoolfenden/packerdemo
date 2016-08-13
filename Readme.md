@@ -6,19 +6,19 @@
 
 3.  Get the admin password via the AWS console
 
-    ```Mstsc &lt;outputIP&gt;.```
+    ```Mstsc <outputIP>```
 
 4.  RDP to the demo pc.
 
 **Lesson 1 Preparation is everything**
 
--   Start admin PowerShell
+-   Start admin PowerShell in the remote PC
 
 -   Install chocolatey
 
-    -   **Set-ExecutionPolicy remotesigned**
+    ```Set-ExecutionPolicy remotesigned```
 
-    -   **iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex**
+    ```iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex```
 
 -   Install Minimum required packages
 
