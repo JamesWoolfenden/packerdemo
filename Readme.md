@@ -1,16 +1,18 @@
 **Instructor**:
 
-1.  Terraform the demo pc
+1.  Terraform the [demo PC](demo-pc).
 
-2.  Get the output ip
+2.  Get the output IP.
 
-3.  Get the admin password via the aws console **mstsc**
+3.  Get the admin password via the AWS console
 
-4.  RDP to the demo pc.
+-   **Mstsc &lt;outputIP&gt;.**
+
+1.  RDP to the demo pc.
 
 **Lesson 1 Preparation is everything**
 
--   Start admin powershell.
+-   Start admin PowerShell.
 
 -   Install chocolatey
 
@@ -48,21 +50,27 @@
 
 <!-- -->
 
--   add to environment
-
--   **In the shell:**
+-   add to keys environment
 
 <!-- -->
 
--   **aws configure**
+-   **In the shell:**
 
-    -   demonstrate packer installed
+    **aws configure**
+
+<!-- -->
+
+-   Demonstrate packer installed
+
+<!-- -->
+
+-   **packer**
 
 **Lesson 2 Building a LAMP stack AMI**
 
 Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
 
-In the root of the repo:
+In the shell at the root of the repo:
 
 -   **Packer build ./packer/LAMP.json**
 
