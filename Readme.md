@@ -6,35 +6,35 @@
 
 3.  Get the admin password via the AWS console
 
-    -   **Mstsc &lt;outputIP&gt;.**
+    ```Mstsc <outputIP>```
 
 4.  RDP to the demo pc.
 
 **Lesson 1 Preparation is everything**
 
--   Start admin PowerShell
+-   Start admin PowerShell in the remote PC
 
 -   Install chocolatey
 
-    -   **Set-ExecutionPolicy remotesigned**
+    ```Set-ExecutionPolicy remotesigned```
 
-    -   **iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex**
+    ```iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex```
 
 -   Install Minimum required packages
 
-    -   **cinst awscli -y**
+    ```cinst awscli -y```
 
-    -   **cinst packer -y**
+    ```cinst packer -y```
 
-    -   **cinst git -y**
+    ```cinst git -y```
 
-    -   **cinst atom -y**
+    ```cinst atom -y```
 
 -   Restart shell
 
 -   Clone demo repo
 
-    git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
+    -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
 >   Cloning into 'packerdemo'...  
     remote: Counting objects: 70, done.  
     remote: Compressing objects: 100% (60/60), done.  
@@ -45,7 +45,7 @@
 
 -   Open Atom from the shell
 
-    -   **atom .**
+     ```atom .```
 
     -   Explain packer & terraform plugin for syntax.
 
@@ -55,15 +55,13 @@
 
 -   Add AWS keys environment
 
-> In the shell:
+    In the shell:
 
--   **aws configure**
-
-<!-- -->
+   ```aws configure```
 
 -   Demonstrate packer installed
 
-    -   **packer**
+   ```packer version```
 
 **Lesson 2 Building a LAMP stack AMI**
 
@@ -129,10 +127,10 @@ and finally fixup the db?
 
 That's the whole of LAMP stack installed. OK now Lamp.json and base.json should be identical.
 
-Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md) parameters.
+Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
 
-In the shell at the root of the repo:
+-   In the shell at the root of the repo:
 
--   **Packer build ./packer/LAMP.json**
+   ```Packer build ./packer/LAMP.json```
 
-Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
+-   Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
