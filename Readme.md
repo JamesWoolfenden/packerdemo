@@ -6,13 +6,13 @@
 
 3.  Get the admin password via the AWS console
 
--   **Mstsc &lt;outputIP&gt;.**
+    -   **Mstsc &lt;outputIP&gt;.**
 
-1.  RDP to the demo pc.
+4.  RDP to the demo pc.
 
 **Lesson 1 Preparation is everything**
 
--   Start admin PowerShell.
+-   Start admin PowerShell
 
 -   Install chocolatey
 
@@ -34,9 +34,7 @@
 
 -   Clone demo repo
 
-<!-- -->
-
-    -   **git clone <https://github.com/JamesWoolfenden/packerdemo.git>**
+    -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
 
 <!-- -->
 
@@ -50,21 +48,17 @@
 
 <!-- -->
 
--   add to keys environment
+-   Add AWS keys environment
 
-<!-- -->
+> In the shell:
 
--   **In the shell:**
-
-    **aws configure**
+-   **aws configure**
 
 <!-- -->
 
 -   Demonstrate packer installed
 
-<!-- -->
-
--   **packer**
+    -   **packer**
 
 **Lesson 2 Building a LAMP stack AMI**
 
