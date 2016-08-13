@@ -14,7 +14,7 @@
 
 -   Install chocolatey
 
-    -   **set-executionpolicy remotesigned**
+    -   **Set-ExecutionPolicy remotesigned**
 
     -   **iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex**
 
@@ -32,34 +32,38 @@
 
 -   Clone demo repo
 
-> **git clone https://github.com/JamesWoolfenden/packerdemo.git**
+<!-- -->
+
+-   **git clone <https://github.com/JamesWoolfenden/packerdemo.git>**
+
+<!-- -->
 
 -   Open Atom from the shell
 
     -   **atom .**
 
-    -   explain packer & terraform plugin for syntax
+    -   Explain packer & terraform plugin for syntax.
 
-    -   Generate an access key in aws console
+    -   Generate an access key in [AWS console](http://console.aws.amazon.com).
 
 <!-- -->
 
--   <http://console.aws.amazon.com>
-
 -   add to environment
+
+-   **In the shell:**
+
+<!-- -->
 
 -   **aws configure**
 
     -   demonstrate packer installed
 
-    -   packer
-
 **Lesson 2 Building a LAMP stack AMI**
 
-Open the Lamp.json file and explain.
+Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
 
 In the root of the repo:
 
 -   **Packer build ./packer/LAMP.json**
 
-Show the built ami in the aws console.
+Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
