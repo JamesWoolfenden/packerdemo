@@ -22,25 +22,25 @@
 
 -   Install Minimum required packages
 
-    -   **cinst awscli -y**
+    ```cinst awscli -y```
 
-    -   **cinst packer -y**
+    ```cinst packer -y```
 
-    -   **cinst git -y**
+    ```cinst git -y```
 
-    -   **cinst atom -y**
+    ```cinst atom -y```
 
 -   Restart shell
 
 -   Clone demo repo
 
-    -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
+    -  ```git clone ```<https://github.com/JamesWoolfenden/packerdemo.git>
 
 <!-- -->
 
 -   Open Atom from the shell
 
-    -   **atom .**
+    -   ```atom .```
 
     -   Explain packer & terraform plugin for syntax.
 
@@ -52,13 +52,13 @@
 
 > In the shell:
 
--   **aws configure**
+-   ```aws configure```
 
 <!-- -->
 
 -   Demonstrate packer installed
 
-    -   **packer**
+    -   ```packer```
 
 **Lesson 2 Building a LAMP stack AMI**
 
@@ -66,6 +66,6 @@ Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
 
 In the shell at the root of the repo:
 
--   **Packer build ./packer/LAMP.json**
+-   ```Packer build ./packer/LAMP.json```
 
 Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
