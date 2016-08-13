@@ -1,10 +1,10 @@
-**Hashicult induction**
+**Packer induction**
 
 **Speed**
 
 Builds, environments whatever, we should always be trying to do it faster so that we can do more, interact more. An image is launched as quickly as possible. If it’s part of a scaling group, this is even more critical.
 
-**Cross Platform **
+**Cross Platform**
 
 It can make any platform on any platform.
 
