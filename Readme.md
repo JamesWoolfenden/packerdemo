@@ -36,7 +36,7 @@
 
 <!-- -->
 
--   **git clone <https://github.com/JamesWoolfenden/packerdemo.git>**
+    -   **git clone <https://github.com/JamesWoolfenden/packerdemo.git>**
 
 <!-- -->
 
