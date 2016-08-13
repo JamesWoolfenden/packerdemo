@@ -60,10 +60,10 @@
 
 **Lesson 2 Building a LAMP stack AMI**
 
-Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
+-   Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
 
-In the shell at the root of the repo:
+-   In the shell at the root of the repo:
 
    ```Packer build ./packer/LAMP.json```
 
-Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
+-   Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
