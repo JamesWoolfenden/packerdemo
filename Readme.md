@@ -50,11 +50,9 @@
 
 -   Add AWS keys environment
 
-> In the shell:
+    In the shell:
 
    ```aws configure```
-
-<!-- -->
 
 -   Demonstrate packer installed
 
