@@ -7,7 +7,7 @@
           "ami_regions":["eu-west-1"],
           "instance_type": "t2.medium",
           "communicator": "ssh",
-          "force_deregister":false,
+          "force_deregister":true,
           "ssh_username": "ubuntu",
           "ami_name": "LAMP Ubuntu"
       }
