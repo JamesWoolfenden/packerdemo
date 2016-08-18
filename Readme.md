@@ -2,12 +2,12 @@
 
 1.  Terraform the [demo PC](demo-pc).
     Set your AWS config. 
-```terraform apply demo-pc```
+    ```terraform apply demo-pc```
 
 2.  Get the output IP.
 >Outputs:
-
-public ip = 54.194.22.10
+>
+>public ip = 54.194.22.10
 <!-- -->
 
 3.  Get the admin password via the [AWS console](http://console.aws.amazon.com).
