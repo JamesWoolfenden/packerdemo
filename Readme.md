@@ -1,7 +1,9 @@
 **Instructor**:
 
 1.  Terraform the [demo PC](demo-pc).
-    Set your AWS config. 
+
+    Set your AWS config.
+
     ```terraform apply demo-pc```
 
 2.  Get the output IP.
