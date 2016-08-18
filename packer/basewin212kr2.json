@@ -9,6 +9,7 @@
           "communicator": "winrm",
           "winrm_username": "Administrator",
           "winrm_timeout": "10m",
+          "force_deregister":true,
           "winrm_password": "MyF@v0uriteG@me5",
           "ami_name": "Web Server v{{user `version`}} Windows2012R2"
       }

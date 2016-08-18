@@ -9,9 +9,9 @@ set-item WSMan:\localhost\Service\Auth\Basic  -Value True
 #firewall
 set-NetFirewallRule -Name  WINRM-HTTP-In-TCP-PUBLIC -Profile Any -Enabled true
 set-NetFirewallRule -Name  WINRM-HTTP-In-TCP -Profile Any -Enabled true
-new-NetFirewallRule -Name  Terraform-http -DisplayName  "Terraform http" -Enabled  True -Profile Any -Action  Allow -protocol tcp -RemotePort 5985 
-new-NetFirewallRule -Name  Terraform-http -DisplayName  "Terraform http" -Enabled  True -Profile Any -Action  Allow -protocol tcp -RemotePort 5986 
+new-NetFirewallRule -Name  Terraform-http -DisplayName  "Terraform http" -Enabled  True -Profile Any -Action  Allow -protocol tcp -RemotePort 5985
+new-NetFirewallRule -Name  Terraform-https -DisplayName  "Terraform http" -Enabled  True -Profile Any -Action  Allow -protocol tcp -RemotePort 5986
+Enable-PSRemoting -force
 
-#testconnectivity with powershell 
+#testconnectivity with powershell
 #New-PSSession -ComputerName <temp-ip> -credential (get-credential)
- 
