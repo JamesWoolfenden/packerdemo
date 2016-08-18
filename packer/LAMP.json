@@ -5,7 +5,7 @@
           "region": "eu-west-1",
           "source_ami": "ami-f95ef58a",
           "ami_regions":["eu-west-1"],
-          "instance_type": "t2.medium",
+          "instance_type": "t2.micro",
           "communicator": "ssh",
           "force_deregister":true,
           "ssh_username": "ubuntu",
