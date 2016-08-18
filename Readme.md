@@ -1,13 +1,19 @@
 **Instructor**:
 
 1.  Terraform the [demo PC](demo-pc).
+    Set your AWS config. 
+    ```terraform apply demo-pc```
 
 2.  Get the output IP.
+>Outputs:
 
-3.  Get the admin password via the AWS console
+public ip = 54.194.22.10
+<!-- -->
+
+3.  Get the admin password via the [AWS console](http://console.aws.amazon.com).
 
     ```Mstsc <outputIP>```
-
+    Using your private key.
 4.  RDP to the demo pc.
 
 **Lesson 1 Preparation is everything**
