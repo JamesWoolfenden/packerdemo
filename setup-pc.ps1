@@ -1,3 +1,4 @@
+winrm quickconfig
 set-item WSMan:\localhost\Client\AllowUnencrypted -Value True
 set-item WSMan:\localhost\Client\Auth\Basic  -Value True
 set-item WSMan:\localhost\Client\TrustedHosts -Value *
@@ -12,5 +13,5 @@ new-NetFirewallRule -Name  Terraform-http -DisplayName  "Terraform http" -Enable
 new-NetFirewallRule -Name  Terraform-http -DisplayName  "Terraform http" -Enabled  True -Profile Any -Action  Allow -protocol tcp -RemotePort 5986 
 
 #testconnectivity with powershell 
-New-PSSession -ComputerName <temp-ip> -credential (get-credential)
+#New-PSSession -ComputerName <temp-ip> -credential (get-credential)
  
