@@ -43,13 +43,13 @@
 -   Clone demo repo
 
     -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
+
 >   Cloning into 'packerdemo'...  
     remote: Counting objects: 70, done.  
     remote: Compressing objects: 100% (60/60), done.  
     remote: Total 70 (delta 32), reused 34 (delta 6), pack-reused 0  
     Unpacking objects: 100% (70/70), done.  
     Checking connectivity... done.  
-<!-- -->
 
 -   Open Atom from the shell
 

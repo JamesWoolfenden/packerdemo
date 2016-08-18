@@ -4,7 +4,7 @@
           "type": "amazon-ebs",
           "region": "eu-west-1",
           "source_ami": "ami-29eb7e5a",
-          "instance_type": "m4.xlarge",
+          "instance_type": "t2.micro",
           "user_data_file": "setup_winrm.txt",
           "communicator": "winrm",
           "winrm_username": "Administrator",
