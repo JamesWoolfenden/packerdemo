@@ -5,10 +5,10 @@
           "region": "eu-west-1",
           "source_ami": "ami-29eb7e5a",
           "instance_type": "m4.xlarge",
-          "user_data_file": "setup_winrm_wip.txt",
+          "user_data_file": "setup_winrm.txt",
           "communicator": "winrm",
           "winrm_username": "Administrator",
-	  "winrm_timeout": "10m",
+          "winrm_timeout": "10m",
           "winrm_password": "MyF@v0uriteG@me5",
           "ami_name": "Web Server v{{user `version`}} Windows2012R2"
       }
