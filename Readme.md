@@ -86,7 +86,7 @@ This fails with
 
 We need to specify an ubuntu ami, from the offical images account 099720109477. At your shell:
 
-```$Ubuntu=(aws ec2 describe-images --owners 099720109477 --filters Name=root-device-type,Values=ebs Name=architecture,Values=x86_64 Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'|convertfrom-json).Images```
+```$Ubuntu=(aws ec2 describe-images --owners 099720109477 --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'"|convertfrom-json).Images```
 
 ```$ubuntu| sort Name| Select-Object -Last 1```
 
