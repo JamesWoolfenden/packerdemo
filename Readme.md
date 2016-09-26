@@ -153,6 +153,11 @@ Winrm  needs to be set to be unencrypted, setting your base image to use https i
 
 This is repeated on the target system through the use of user data payload, pay close attention to your choice of password as the base image has a very strict policy in place.  
 
+You can find the lastest windows ami using: 
+   ```$Windows=(aws ec2 describe-images --owners self amazon --filters --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=platform,Values=windows" "Name=name,Values='Windows_Server-2012-R2_RTM-English-64Bit-Base*'|convertfrom-json).Images|sort Name| Select-Object -Last 1```
+
+More information on Windows AMI and update schedules:https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#subscribe-notifications 
+
    ```Packer build ./packer/basewin212kr2.json```
 
 It will take a while for the image to fully boot in AWS.
