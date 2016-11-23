@@ -43,13 +43,13 @@
 -   Clone demo repo
 
     -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
+
 >   Cloning into 'packerdemo'...  
     remote: Counting objects: 70, done.  
     remote: Compressing objects: 100% (60/60), done.  
     remote: Total 70 (delta 32), reused 34 (delta 6), pack-reused 0  
     Unpacking objects: 100% (70/70), done.  
     Checking connectivity... done.  
-<!-- -->
 
 -   Open Atom from the shell
 
@@ -86,7 +86,7 @@ This fails with
 
 We need to specify an ubuntu ami, from the offical images account 099720109477. At your shell:
 
-```$Ubuntu=(aws ec2 describe-images --owners 099720109477 --filters Name=root-device-type,Values=ebs Name=architecture,Values=x86_64 Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'|convertfrom-json).Images```
+```$Ubuntu=(aws ec2 describe-images --owners 099720109477 --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'"|convertfrom-json).Images```
 
 ```$ubuntu| sort Name| Select-Object -Last 1```
 
@@ -142,3 +142,22 @@ Open the [Lamp.json](packer/LAMP.json) file and [explain](Packer.md).
    ```Packer build ./packer/LAMP.json```
 
 -   Show the built AMI in the AWS [console](https://console.aws.amazon.com/console/home).
+
+**Lesson 3 Building a windows application server**
+
+Building a Windows server in packer is a bit more problematic.
+To save you a lot of time and headaches, you need to run the script setup-pc.ps1 first.
+
+This open ports on your firewall for winrm, and enables/set-up winrm.
+Winrm  needs to be set to be unencrypted, setting your base image to use https is not a beginner exercise.
+
+This is repeated on the target system through the use of user data payload, pay close attention to your choice of password as the base image has a very strict policy in place.  
+
+You can find the lastest windows ami using: 
+   ```$Windows=(aws ec2 describe-images --owners self amazon --filters --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=platform,Values=windows" "Name=name,Values='Windows_Server-2012-R2_RTM-English-64Bit-Base*'|convertfrom-json).Images|sort Name| Select-Object -Last 1```
+
+More information on Windows AMI and update schedules:https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/windows-ami-version-history.html#subscribe-notifications 
+
+   ```Packer build ./packer/basewin212kr2.json```
+
+It will take a while for the image to fully boot in AWS.

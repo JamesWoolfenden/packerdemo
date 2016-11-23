@@ -4,12 +4,11 @@
           "type": "amazon-ebs",
           "region": "eu-west-1",
           "source_ami": "ami-29eb7e5a",
-          "instance_type": "t2.micro",
-          "user_data_file": "setup_winrm.txt",
+          "instance_type": "m4.xlarge",
+          "user_data_file": "setup_winrm_wip.txt",
           "communicator": "winrm",
           "winrm_username": "Administrator",
-	        "winrm_timeout": "10m",
-          "force_deregister":true,
+	       "winrm_timeout": "10m",
           "winrm_password": "MyFav0uriteG@me5",
           "ami_name": "Web Server v{{user `version`}} Windows2012R2"
       }

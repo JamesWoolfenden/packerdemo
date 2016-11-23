@@ -8,9 +8,14 @@
           "user_data_file": "setup_winrm.txt",
           "communicator": "winrm",
           "winrm_username": "Administrator",
+<<<<<<< HEAD
 	        "winrm_timeout": "10m",
-          "force_deregister":true,
           "winrm_password": "MyFav0uriteG@me5",
+=======
+          "winrm_timeout": "10m",
+          "force_deregister":true,
+          "winrm_password": "MyF@v0uriteG@me5",
+>>>>>>> 2c425b98ee045b7ae6ac47c4a727be2ad27c976b
           "ami_name": "Web Server v{{user `version`}} Windows2012R2"
       }
     ],
