@@ -8,8 +8,8 @@
           "user_data_file": "setup_winrm_wip.txt",
           "communicator": "winrm",
           "winrm_username": "Administrator",
-	       "winrm_timeout": "30m",
-          "winrm_password": "N33dsTo�eComplex",
+	        "winrm_timeout": "10m",
+          "winrm_password": "MyFav0uriteG@me5",
           "ami_name": "Web Server v{{user `version`}} Windows2012R2"
       }
     ],

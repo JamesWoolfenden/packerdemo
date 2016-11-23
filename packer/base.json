@@ -3,7 +3,7 @@
       {
           "type": "amazon-ebs",
           "region": "eu-west-1",
-          "source_ami": "",
+          "source_ami": "ami-55452e26",
           "ami_regions":["eu-west-1"],
           "instance_type": "t2.medium",
           "communicator": "ssh",
@@ -11,5 +11,16 @@
           "ssh_username": "ubuntu",
           "ami_name": "base Ubuntu"
       }
-    ]
+    ],
+    "provisioners": [
+      {
+         "type": "shell",
+         "inline": [
+         "sudo apt-get install apache2 -y",
+         "sudo apt-get install mysql-server -y",
+         "sudo apt-get install libapache2-mod-auth-mysql -y",
+         "sudo apt-get install php5-mysql -y",
+         "sudo mysql_install_db"]
+       }
+     ]
 }
