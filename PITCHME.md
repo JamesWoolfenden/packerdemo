@@ -14,6 +14,8 @@
 >public ip = 54.194.22.10
 <!-- -->
 
+---
+
 3.  Get the admin password via the [AWS console](http://console.aws.amazon.com).
 
     ```Mstsc <outputIP>```
@@ -32,6 +34,8 @@
 
     ```iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex```
 
+---
+
 -   Install Minimum required packages
 
     ```cinst awscli -y```
@@ -41,6 +45,8 @@
     ```cinst git -y```
 
     ```cinst atom -y```
+
+---
 
 -   Restart shell
 
