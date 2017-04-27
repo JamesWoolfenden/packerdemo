@@ -73,7 +73,6 @@
 <!-- -->
 
 ---
-
 -   Add AWS keys environment
 
     In the shell:
@@ -85,7 +84,6 @@
    ```packer version```
 
 ---
-
 **Lesson 2 Building a LAMP stack AMI**
 
 Open [base.json](packer/base.json) in atom, then in your shell:
@@ -99,6 +97,7 @@ This fails with
 >    
 >    * A source_ami must be specified
 
+---
 We need to specify an ubuntu ami, from the offical images account 099720109477. At your shell:
 
 ```$Ubuntu=(aws ec2 describe-images --owners 099720109477 --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'"|convertfrom-json).Images```
@@ -109,6 +108,7 @@ This was ami-55452e26 at time of writing. Update base.json and check:
 
 ```packer validate ./packer/base.json```
 
+---
 ### Doing something, anything...
 
 It's not much use yet as it is, we haven't added anything into the base ami, for this we use provisioners.
