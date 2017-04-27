@@ -15,7 +15,6 @@
 <!-- -->
 
 ---
-
 3.  Get the admin password via the [AWS console](http://console.aws.amazon.com).
 
     ```Mstsc <outputIP>```
@@ -24,7 +23,7 @@
 
 ---
 
-**Lesson 1 Preparation is everything**
+*Lesson 1 Preparation is everything*
 
 -   Start admin PowerShell in the remote PC
 
@@ -33,9 +32,7 @@
     ```Set-ExecutionPolicy remotesigned```
 
     ```iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex```
-
----
-
++++
 -   Install Minimum required packages
 
     ```cinst awscli -y```
@@ -47,8 +44,7 @@
     ```cinst atom -y```
 
 -   Restart shell
-
----
++++
 -   Clone demo repo
 
     -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
