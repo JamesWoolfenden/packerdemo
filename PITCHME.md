@@ -46,10 +46,9 @@
 
     ```cinst atom -y```
 
----
-
 -   Restart shell
 
+---
 -   Clone demo repo
 
     -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
@@ -61,6 +60,8 @@
     Unpacking objects: 100% (70/70), done.  
     Checking connectivity... done.  
 
+---
+
 -   Open Atom from the shell
 
      ```atom .```
@@ -70,6 +71,8 @@
     -   Generate an access key in [AWS console](http://console.aws.amazon.com).
 
 <!-- -->
+
+---
 
 -   Add AWS keys environment
 
