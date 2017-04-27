@@ -1,6 +1,5 @@
 ---
-
-**Instructor**:
+**Instructor preparation Notes**
 
 1.  Terraform the [demo PC](demo-pc).
 
@@ -46,7 +45,7 @@
 +++
 -   Clone demo repo
 
-    -   **git**` clone `<https://github.com/JamesWoolfenden/packerdemo.git>
+    -   ```git clone <https://github.com/JamesWoolfenden/packerdemo.git>
 
 >   Cloning into 'packerdemo'...  
     remote: Counting objects: 70, done.  
