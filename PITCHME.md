@@ -13,8 +13,7 @@
 >
 >public ip = 54.194.22.10
 <!-- -->
-
----
++++
 3.  Get the admin password via the [AWS console](http://console.aws.amazon.com).
 
     ```Mstsc <outputIP>```
@@ -23,7 +22,7 @@
 
 ---
 
-*Lesson 1 Preparation is everything*
+**Lesson 1 Preparation is everything**
 
 -   Start admin PowerShell in the remote PC
 
