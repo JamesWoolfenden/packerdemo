@@ -97,7 +97,7 @@ We need to specify an ubuntu ami, from the offical images account 099720109477. 
 
 `$ubuntu| sort Name| Select-Object -Last 1`
 
-This was ami-55452e26 at time of writing. Update base.json and check:
+This was ami-057498547c2677131 at time of writing. Update base.json and check:
 
 `packer validate ./packer/base.json`
 

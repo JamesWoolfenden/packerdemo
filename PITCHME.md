@@ -105,11 +105,12 @@ This fails with
 >   +++
 >   We need to specify an ubuntu ami, from the offical images account 099720109477. At your shell:
 
-`$Ubuntu=(aws ec2 describe-images --owners 099720109477 --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'"|convertfrom-json).Images`
+```cli
+aws ec2 describe-images --owners 099720109477 --filters "Name=root-devi
+ce-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=name,Values='*hvm-ssd/ubuntu-trusty-14.04*'" --query 'sort_by(Images, &Name)[-1].ImageId' --output text
+```
 
-`$ubuntu| sort Name| Select-Object -Last 1`
-
-This was ami-55452e26 at time of writing. Update base.json and check:
+This was ami-057498547c2677131 at time of writing. Update base.json and check:
 
 `packer validate ./packer/base.json`
 
@@ -179,7 +180,7 @@ This is repeated on the target system through the use of user data payload, pay 
 You can find the lastest windows ami using:
 
 ```powershell
-$Windows=(aws ec2 describe-images --owners self amazon --filters --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=platform,Values=windows" "Name=name,Values='Windows_Server-2012-R2_RTM-English-64Bit-Base*'|convertfrom-json).Images|sort Name| Select-Object -Last 1
+$Windows=(aws ec2 describe-images --owners self amazon --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=platform,Values=windows" "Name=name,Values='Windows_Server-2012-R2_RTM-English-64Bit-Base*'|convertfrom-json).Images|sort Name| Select-Object -Last 1
 ```
 
 More information on Windows AMI and update schedules:
