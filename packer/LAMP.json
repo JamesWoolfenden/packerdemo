@@ -1,26 +1,28 @@
 {
-    "builders": [
-      {
-          "type": "amazon-ebs",
-          "region": "eu-west-1",
-          "source_ami": "ami-f95ef58a",
-          "ami_regions":["eu-west-1"],
-          "instance_type": "t2.micro",
-          "communicator": "ssh",
-          "force_deregister":true,
-          "ssh_username": "ubuntu",
-          "ami_name": "LAMP Ubuntu"
-      }
-    ],
-    "provisioners": [
+  "builders": [
     {
-       "type": "shell",
-       "inline": ["sudo apt-get update -y",
-                  "sudo apt-get install apache2 -y",
-                  "sudo apt-get install mysql-server -y",
-                  "sudo apt-get install libapache2-mod-auth-mysql -y",
-                  "sudo apt-get install php5-mysql -y",
-                  "sudo mysql_install_db"]
+      "type": "amazon-ebs",
+      "region": "eu-west-1",
+      "source_ami": "ami-f95ef58a",
+      "ami_regions": ["eu-west-1"],
+      "instance_type": "t2.micro",
+      "communicator": "ssh",
+      "force_deregister": true,
+      "ssh_username": "ubuntu",
+      "ami_name": "LAMP Ubuntu"
     }
-    ]
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo apt-get update -y",
+        "sudo apt-get install apache2 -y",
+        "sudo apt-get install mysql-server -y",
+        "sudo apt-get install libapache2-mod-auth-mysql -y",
+        "sudo apt-get install php5-mysql -y",
+        "sudo mysql_install_db"
+      ]
+    }
+  ]
 }

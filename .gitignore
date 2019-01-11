@@ -1,5 +1,8 @@
 *.key
+*.orig
 *.pub
 *.tfstate
 *.backup
 /secret
+id_rsa*
+.terraform/

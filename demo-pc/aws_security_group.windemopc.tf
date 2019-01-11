@@ -1,5 +1,5 @@
-resource "aws_security_group" "demopc" {
-  name        = "demopc"
+resource "aws_security_group" "windemopc" {
+  name        = "windemopc"
   description = "Terraform informa security group"
 
   #rdp
@@ -9,7 +9,7 @@ resource "aws_security_group" "demopc" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   #winrm
   ingress {
     from_port   = 5985
