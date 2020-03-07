@@ -189,3 +189,9 @@ More information on Windows AMI and update schedules:
 `Packer build ./packer/basewin212kr2.json`
 
 It will take a while for the image to fully boot in AWS.
+
+build each component file
+explain
+lamp stack with ansible
+- ansible-galaxy install aplyca.lamp
+lamp stack with shell script

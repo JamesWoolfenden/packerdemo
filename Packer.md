@@ -1,4 +1,4 @@
-# Packer intoduction
+# Packer introduction
 
 ## Speed
 

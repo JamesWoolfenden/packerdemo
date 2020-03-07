@@ -1,14 +1,13 @@
 source "amazon-ebs" "base1604" {
   ami_description= "ubuntu base 16.04"
-  ami_name= "ubuntu-16.04-BASE-v1-{{timestamp}}-AMI"
-  ami_users= [""]
+  ami_name= "ubuntu-16.04-lamp-v1-{{timestamp}}-AMI"
   ami_virtualization_type= "hvm"
   #associate_public_ip_address= true
   instance_type= "t2.micro"
   region= var.region
   run_tags {
-    Name= "ubuntu-base-packer"
-    Application= "base"
+    Name= "ubuntu-lamp-packer"
+    Application= "lamp"
     OS= "Ubuntu 16.04"
   }
   spot_price= "auto"
