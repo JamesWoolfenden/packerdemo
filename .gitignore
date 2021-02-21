@@ -6,3 +6,4 @@
 /secret
 id_rsa*
 .terraform/
+.terraform.lock.hcl
